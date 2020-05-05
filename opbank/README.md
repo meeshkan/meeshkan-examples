@@ -9,7 +9,7 @@ This repository contains the source code for our article: [How to create a sandb
 
 * [Getting started](#getting-started)
     * [Setting up the repository](#setting-up-the-repository)
-    * [Installing Meeshkan](#installing-meeshkan)
+    * [Installing HMT](#installing-hmt)
     * [Starting the mock server](#starting-the-mock-server)
     * [Running the tests](#running-the-tests)
 * [Mentioned resources](#mentioned-resources)
@@ -25,8 +25,8 @@ This repository contains the source code for our article: [How to create a sandb
 
 Clone this repository and move into the directory:
 ```bash
-git clone https://github.com/meeshkan/meeshkan-examples.git
-cd meeshkan-examples
+git clone https://github.com/meeshkan/hmt-examples.git
+cd hmt-examples
 ```
 
 Once you're there, [create a virtual environment](https://docs.python.org/3/tutorial/venv.html). 
@@ -41,25 +41,25 @@ Finally, move into the `opbank` directory:
 cd opbank
 ```
 
-### Installing Meeshkan
+### Installing HMT
 
-Meeshkan is written in Python and available as a [PyPi package](https://pypi.org/project/meeshkan/). 
+The HTTP Mocking Toolkit (HMT) is written in Python and available as a [PyPi package](https://pypi.org/project/hmt/). 
 
-To install Meeshkan via [pip](https://pip.pypa.io/en/stable/installing/), run:
+To install HMT via [pip](https://pip.pypa.io/en/stable/installing/), run:
 ```bash
-pip install meeshkan
+pip install hmt
 ```
 
 To make sure it's installed properly, run:
 ```bash
-meeshkan --help
+hmt --help
 ```
 
 ### Starting the mock server
 
-Once Meeshkan is installed, run the following command to spin up your mock OP Bank server:
+Once HMT is installed, run the following command to spin up your mock OP Bank server:
 ```bash
-meeshkan mock ./spec/openapi.yml
+hmt mock ./spec/openapi.yml
 ```
 
 ### Running the tests
@@ -78,7 +78,7 @@ Here are a few of the resources mentioned in our tutorial:
 
 ## Contributing
 
-Notice a bug? Have any questions? The best way to get involved is to [open an issue](https://github.com/meeshkan/meeshkan-examples/issues).
+Notice a bug? Have any questions? The best way to get involved is to [open an issue](https://github.com/meeshkan/hmt-examples/issues).
 
 Please note that this project is governed by the [Meeshkan Community Code of Conduct](https://github.com/meeshkan/code-of-conduct). By participating, you agree to abide by its terms.
 
@@ -87,6 +87,6 @@ Please note that this project is governed by the [Meeshkan Community Code of Con
 At [Meeshkan](https://meeshkan.com/), we're working to improve how people test their products. So no matter if you loved or loathed our tutorial, we want to hear from you. 
 
 Here are some ways you can get in touch:
-- [Open an issue](https://github.com/meeshkan/meeshkan-examples/issues)
+- [Open an issue](https://github.com/meeshkan/hmt-examples/issues)
 - [Tweet at us](https://twitter.com/meeshkanml)
 - [Reach out on Gitter](https://gitter.im/Meeshkan/community)

@@ -8,8 +8,7 @@ This repository contains the source code for our article: [How to create a sandb
 ## What's in this document
 
 * [Getting started](#getting-started)
-    * [Setting up the repository](#setting-up-the-repository)
-    * [Installing HMT](#installing-hmt)
+    * [Installation](#installation)
     * [Starting the mock server](#starting-the-mock-server)
     * [Running the tests](#running-the-tests)
 * [Mentioned resources](#mentioned-resources)
@@ -21,7 +20,7 @@ This repository contains the source code for our article: [How to create a sandb
 ⚠️**Prerequisites**:
 - [Python 3.6+](https://www.python.org/downloads/)
 
-### Setting up the repository
+### Installation
 
 Clone this repository and move into the directory:
 ```bash
@@ -36,35 +35,27 @@ Then, install the dependencies:
 pip install -r requirements.txt
 ```
 
+> This command will install all of the necessary dependencies for the OP Bank API sandbox. Most importantly, this includes the [HTTP Mocking Toolkit (HMT)](https://github.com/meeshkan/hmt) that will create the mock server and [`pytest`](https://docs.pytest.org/en/latest/) for running the tests.
+
 Finally, move into the `opbank` directory:
 ```bash
 cd opbank
 ```
 
-### Installing HMT
-
-The HTTP Mocking Toolkit (HMT) is written in Python and available as a [PyPi package](https://pypi.org/project/hmt/). 
-
-To install HMT via [pip](https://pip.pypa.io/en/stable/installing/), run:
-```bash
-pip install hmt
-```
-
-To make sure it's installed properly, run:
-```bash
-hmt --help
-```
-
 ### Starting the mock server
 
-Once HMT is installed, run the following command to spin up your mock OP Bank server:
+Run the following command to spin up your mock OP Bank server:
 ```bash
-hmt mock ./spec/openapi.yml
+hmt mock ./specs/
 ```
+
+> This command will use the OpenAPI specification located in the `specs` directory to create a mock server with HMT.
+
+Keep this running because you'll need it to execute the tests.
 
 ### Running the tests
 
-You can run the tests with [`pytest`](https://docs.pytest.org/en/latest/):
+With your mock server running in another terminal window, you can run the tests with `pytest`:
 ```bash
 pytest
 ```

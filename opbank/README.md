@@ -46,10 +46,10 @@ cd opbank
 
 Run the following command to spin up your mock OP Bank server:
 ```bash
-hmt mock ./specs/
+hmt mock ./specs/ --callback-dir ./callbacks/
 ```
 
-> This command will use the OpenAPI specification located in the `specs` directory to create a mock server with HMT.
+> This command will use the OpenAPI specification located in the `specs` directory and the custom callbacks in the `callbacks` directory to create a mock server with HMT.
 
 Keep this running because you'll need it to execute the tests.
 
